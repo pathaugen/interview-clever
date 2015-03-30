@@ -1,0 +1,22 @@
+{
+	"title":		"nav.json",
+	"description":	"JSON file to generate nav.",
+	"updated":		"2015-03-29: Sunday",
+	"links":[
+		{
+			"title":		"Home",
+			"description":	"Title page with brief outline of this project by Patrick Haugen.",
+			"link":			"content"
+		},
+		{
+			"title":		"Access Clever API",
+			"description":	"Showing conenction and manipulation of Clever API JSON data.",
+			"link":			"clever"
+		},
+		{
+			"title":		"ChangeLog",
+			"description":	"Log of features and changes in the application.",
+			"link":			"changelog"
+		}
+	]
+}

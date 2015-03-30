@@ -1,0 +1,36 @@
+
+
+/* ---------- ---------- ---------- ---------- ---------- ---------- ---------- ---------- ---------- ---------- *
+file-name:		footer.css
+description:	CSS loaded when footer request is made.
+last-update:	2015-03-29: Sunday
+updated-by:		Patrick Haugen (pathaugen@gmail.com)
+* ---------- ---------- ---------- ---------- ---------- ---------- ---------- ---------- ---------- ---------- */
+
+
+#footer {
+	text-align:			center;
+}
+
+
+#footer ul {
+	list-style:			none;
+	margin:				0px;
+	padding:			0px;
+}
+
+
+#footer ul li {
+	display:			inline;
+}
+
+#footer ul li a {
+	color:				white;
+	text-decoration:	none;
+	
+	display:			inline-block;
+	height:				50px;
+	line-height:		50px;
+	
+	padding:			0px 2%;
+}

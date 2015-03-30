@@ -1,0 +1,17 @@
+{
+	"title":		"footer.json",
+	"description":	"JSON file to generate footer.",
+	"updated":		"2015-03-29: Sunday",
+	"links":[
+		{
+			"title":		"Patrick Haugen Cover Letter",
+			"description":	"View Patrick Haugen's cover letter for Clever.",
+			"link":			"cover"
+		},
+		{
+			"title":		"Patrick Haugen Resume",
+			"description":	"Log of features and changes in the application.",
+			"link":			"resume"
+		}
+	]
+}

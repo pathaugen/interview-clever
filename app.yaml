@@ -1,0 +1,65 @@
+
+
+application: interview-clever
+runtime: python27
+api_version: 1
+threadsafe: true
+
+
+# ---------- ---------- ---------- ---------- ---------- ---------- ---------- ---------- ---------- ---------- #
+# VERSIONS
+
+
+# ---------- ---------- ---------- ---------- ---------- #
+version: 00-00-01-alpha
+# 2015-03-29: Sunday
+# Initial Release
+# ---------- ---------- ---------- ---------- ---------- #
+
+
+# ---------- ---------- ---------- ---------- ---------- ---------- ---------- ---------- ---------- ---------- #
+
+
+# ---------- ---------- ---------- ---------- ---------- ---------- ---------- ---------- ---------- ---------- #
+# HANDLERS
+
+
+handlers:
+  
+  
+# ---------- ---------- ---------- ---------- ---------- #
+- url: /js/jquery.tablesorter.js
+  static_files: js/jquery.tablesorter.js
+  upload: js/jquery.tablesorter.js
+- url: /css/theme.tablesorter.css
+  static_files: css/theme.tablesorter.css
+  upload: css/theme.tablesorter.css
+# ---------- ---------- ---------- ---------- ---------- #
+  
+  
+- url: /resources/sounds
+  static_dir: resources/sounds
+  
+- url: /resources/pdfs
+  static_dir: resources/pdfs
+  
+#- url: /resources/json
+#  static_dir: resources/json
+  
+- url: /resources/images
+  static_dir: resources/images
+  
+- url: /.*
+  script: main.application
+# ---------- ---------- ---------- ---------- ---------- ---------- ---------- ---------- ---------- ---------- #
+
+
+# ---------- ---------- ---------- ---------- ---------- ---------- ---------- ---------- ---------- ---------- #
+# LIBRARIES
+
+
+# libraries:
+
+
+# ---------- ---------- ---------- ---------- ---------- ---------- ---------- ---------- ---------- ---------- #
+

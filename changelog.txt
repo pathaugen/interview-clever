@@ -1,0 +1,118 @@
+---------- ---------- ---------- ---------- ---------- ---------- ---------- ---------- ---------- ----------
+file-name:		changelog.txt
+description:	Changelog for the Interview-Clever application.
+last-update:	2015-03-29: Sunday
+updated-by:		Patrick Haugen (pathaugen@gmail.com)
+---------- ---------- ---------- ---------- ---------- ---------- ---------- ---------- ---------- ----------
+
+
+---------- ---------- ---------- ---------- ---------- ---------- ---------- ---------- ---------- ----------
+Future Releases:
+	- On request from Clever, can implement any features desired:
+		- Animations
+		- Canvas charts and graphs
+		- JS eyecandy effects on the frontend
+		- Reorganization of framework to any other specification
+---------- ---------- ---------- ---------- ---------- ---------- ---------- ---------- ---------- ----------
+
+
+---------- ---------- ---------- ---------- ---------- ---------- ---------- ---------- ---------- ----------
+Current Features:
+	- Custom Backend:
+		- Python Language
+		- JSON for data readability and cross-platform
+	
+	- Custom Frontend:
+		- HTML5
+		- Schema.org RDF Vocabulary
+		- CSS3
+			- Blur on edges of overlapping box elements
+			- Mouseover popups on top bar links
+		- Responsive Design via CSS
+		- Utilizing Google Fonts API
+		- Utilizing Leaflet API for mapping
+	
+	- Cusom Framework:
+		- jQuery API
+		- Velocity.js powered animations replacing default jQuery .animate()
+		- Spinner.js for a vector dynamic loading spinner
+			- opts variable for iOS styling
+		- AJAX using JSON (technically, "AJAJ")
+	
+	- Clever API Handling:
+		- Flow implemented top down:
+			- Pulls all districts from Clever API
+				- Clicking any district pulled then AJAX pulls all schools, teachers, students, sections, events for that district
+					- Clicking a specific school sets that as the top level
+						- AJAX pulls all teachers, students, sections, events for that specific school
+		- Clicking a teacher or student brings the popup window up and AJAX loads all the requested information
+		- Breaking up district teachers by elementary school, middle school, high school, and other faculty
+		- Breaking up district students by elementary school, middle school, and high school
+		- Age calculations of students for display
+		- Color coding students by gender
+		- Unique boy/girl icons for student by gender
+---------- ---------- ---------- ---------- ---------- ---------- ---------- ---------- ---------- ----------
+
+
+---------- ---------- ---------- ---------- ---------- ---------- ---------- ---------- ---------- ----------
+2015-03-29: Sunday
+	- Initial release and launch to GAE and GitHub
+		- Project Sections:
+			- Home/Content
+			- Access Clever API
+			- Changelog
+			- Patrick Haugen Cover Letter
+			- Patrick Haugen Resume
+			- Patrick Haugen Send Project to Colleague
+    - New framework organized in way to show off method for teams working in pure roles with no mixing of languages:
+        - HTML5 Devs: Pure HTML files under /resources/html
+            - framework.html:
+                - Application framework with empty sections to be AJAX loaded by the framework.js file on load
+                - Other HTML pages are AJAX requested by JS
+        - CSS3 Devs: Pure CSS files under /resources/css
+            - framework.css:
+                - Default CSS file loaded with framework
+                - Other CSS files are AJAX requested by JS
+        - JS Devs: Pure JS files under /resources/js
+            - spinner.js:
+                - API that dynamically generates vector loading spinners to use when AJAX loading content
+            - velocity.js:
+                - Replaces the default jQuery .animate() with improved features and speed
+            - framework.js:
+                - Custom jQuery powered backend to this entire framework
+                - AJAX loads all HTML content into framework on initial application GET request
+                - AJAX loads all CSS/JS related to each requested HTML file
+                - Links have defaults redirected to JS, AJAX load requested content into existing DOM framework
+                    - Store all previous requested content to flip between quickly via JS
+                    - Load all CSS/JS related to requested pages AJAX loaded
+        - JSON Devs: Pure JSON files under /resources/json
+        - Python Devs
+            - Framework to bind the above developers together:
+                - main.py:
+                    - When request hits app, this RESTful application handles GET/POST to other files
+                - get_html.py:
+                    - Sends client the empty framework, or translates what URL requested page has been AJAX requested by the framework.js and sends that
+                        - Loads static HTML files
+                        - Replaces {VARIABLES} in HTML with dynamic content
+                - get_css.py:
+                    - Sends the requested CSS file, or framework CSS file by default
+                    - Requested CSS files are AJAX requested by the framework.js
+                - get_js.py:
+                    - Sends the requested JS file, or framework JS file by default
+                    - Requested JS files are AJAX requested by the framework.js
+		- JS Animated Popup:
+			- Utilizing jQuery and Velocity:
+				- Cover Letter
+				- Resume
+				- Email form to send page link to colleagues:
+					- Python mail functions
+					- Google's No Captcha Recaptcha
+					- Limited to @clever.com email addresses
+				- Popup also utilized for Clever API display of teacher and student information
+        - External APIs utilized:
+            - jQuery
+            - jQueryUI
+			- Google Fonts
+			- Google No Captcha Recaptcha
+			- Leaflet
+---------- ---------- ---------- ---------- ---------- ---------- ---------- ---------- ---------- ----------

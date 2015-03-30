@@ -1,0 +1,72 @@
+
+
+<!-- ---------- ---------- ---------- ---------- ---------- ---------- ---------- ---------- ---------- ---------- --
+file-name:		content.html
+description:	Content for the framework which is AJAX loaded in. General information about the project.
+last-update:	2015-03-29: Sunday
+updated-by:		Patrick Haugen (pathaugen@gmail.com)
+!-- ---------- ---------- ---------- ---------- ---------- ---------- ---------- ---------- ---------- ---------- -->
+
+
+<div id="ajax-content">
+	<h1>Patrick Haugen's Interview Project for Clever</h1>
+	
+	<h2>Notes About This Project</h2>
+	<p>
+		Simple framework to show off competency in various categories:
+	</p>
+	<ul>
+		<li>Full-Stack Development</li>
+		<li>Python backend</li>
+		<li>Javascript and multiple APIs (jQuery, etc.)</li>
+		<li>AJAX methods with caching, load inticators, etc.</li>
+		<li>JSON usage and manipulation techniques</li>
+		<li>HTML5 and separation of HTML from other code</li>
+		<li>CSS3 and separation of CSS from other code</li>
+	</ul>
+	<p>
+		Project hosted with full source available at:
+		<br /><a href="https://github.com/pathaugen/interview-clever/">https://github.com/pathaugen/interview-clever/</a>
+	</p>
+	<p>
+		Artificial delay added on AJAX loading of sections to be able to view the working code in action (realtime is near-instant).
+		This artificial delay is per-element on HTML load and a random value between 0 - 3 seconds with a new value selected each load.
+		Experience how fast the cache is by flipping between the two menu items (Home, Clever, and Changelog) after the initial random delay load of both.
+	</p>
+	<p>
+		Recommend bringing up the Javascript Console (F12 in Internet Explorer) and reloading the framework to view all JS log messages to best view content flow,
+		AJAX loading of various files, and development documentation stylings.
+	</p>
+	<p>
+		Contact <a href="mailto:pathaugen@gmail.com">Patrick Haugen</a> for an interview! More projects can be shown in interview that are not open-source.
+	</p>
+	<p>
+		Willing to code any requested features. Contact <a href="mailto:pathaugen@gmail.com">Patrick Haugen</a> and schedule an interview where the new features will be shown.
+	</p>
+</div>
+
+
+<script>
+/* ---------- ---------- ---------- ---------- ---------- */
+$(function() {
+	var map = L.map('map-clever', {
+		scrollWheelZoom: false
+	}).setView([37.78732835, -122.399375199131], 14);
+	
+	L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
+		attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors',
+		maxZoom: 18
+	}).addTo(map);
+	
+	var marker = L.marker( [37.78732835, -122.399375199131] ).addTo(map);
+	marker.bindPopup("<b>Clever Headquarters</b><br />140 Second Street<br />4th Floor<br />San Francisco, CA 94105<br />(877) 578-5572<br /><b>Future staff additions:<br />Patrick Haugen</b>").openPopup();
+});
+/* ---------- ---------- ---------- ---------- ---------- */
+</script>
+<div class="map-container">
+	<h1>Map and Driving Directions</h1>
+	<div class="map" id="map-clever">
+		<h2>Map</h2>
+	</div>
+</div>
+

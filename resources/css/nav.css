@@ -1,0 +1,81 @@
+
+
+/* ---------- ---------- ---------- ---------- ---------- ---------- ---------- ---------- ---------- ---------- *
+file-name:		nav.css
+description:	CSS loaded when nav request is made.
+last-update:	2015-03-29: Sunday
+updated-by:		Patrick Haugen (pathaugen@gmail.com)
+* ---------- ---------- ---------- ---------- ---------- ---------- ---------- ---------- ---------- ---------- */
+
+
+#nav {
+	text-align:			center;
+}
+
+
+#nav ul {
+	list-style:			none;
+	margin:				0px;
+	padding:			0px;
+}
+
+
+#nav ul li {
+	display:			inline;
+}
+
+#nav ul li a {
+	color:				white;
+	text-decoration:	none;
+	
+	display:			inline-block;
+	position:			relative;
+	height:				50px;
+	line-height:		50px;
+	
+	padding:			0px 2%;
+}
+
+#nav ul li a:hover {
+	text-decoration:	none;
+}
+
+/* CSS3 popup when mouseover the nav menu items */
+#nav ul li a:hover:after{
+	background:			#333;
+	background:			rgba(0,0,0,.8); /* Transparancy */
+	color:				#fff;
+	border-radius:		5px;
+	
+	position:			absolute;
+	top:				50px;
+	left:				-50%;
+	
+	content:			attr(title);
+	line-height:		1.0em;
+	
+	padding:			20px 10px;
+	/* compensation for padding so dimensions stay the same */
+	-webkit-box-sizing:	border-box; /* Safari/Chrome, other WebKit */
+	-moz-box-sizing:	border-box; /* Firefox, other Gecko */
+	box-sizing:			border-box; /* Opera/IE 8+ */
+	
+	width:				200%;
+	z-index:			9002;
+}
+
+/* CSS3 triangle pointer at the top of the popup bubble */
+#nav ul li a:hover:before{
+    border:				solid;
+    border-color:		black transparent;
+    border-width:		0 6px 6px 6px;
+    
+    position:			absolute;
+	top:				44px;
+    left:				50%;
+    
+    content:			"";
+    
+    z-index:			9003;
+}
+

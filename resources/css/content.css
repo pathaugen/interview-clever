@@ -1,0 +1,24 @@
+
+
+/* ---------- ---------- ---------- ---------- ---------- ---------- ---------- ---------- ---------- ---------- *
+file-name:		content.css
+description:	CSS loaded when content request is made.
+last-update:	2015-03-29: Sunday
+updated-by:		Patrick Haugen (pathaugen@gmail.com)
+* ---------- ---------- ---------- ---------- ---------- ---------- ---------- ---------- ---------- ---------- */
+
+
+.map-container {
+	clear:				both;
+	background-color:	lightcoral;
+}
+.map-container h1 {
+	display:			none;
+}
+.map {
+	height:				500px;
+}
+.map h2 {
+	display:			none;
+}
+

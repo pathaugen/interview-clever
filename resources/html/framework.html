@@ -1,0 +1,75 @@
+
+
+<!-- ========== ========== ========== ========== ========== ========== ========== ========== ========== ==========
+file-name:		framework.html
+description:	Content to be replaced via AJAX with menu and content of the page requested.
+last-update:	2015-03-29: Sunday
+updated-by:		Patrick Haugen (pathaugen@gmail.com)
+========== ========== ========== ========== ========== ========== ========== ========== ========== ========== -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>Patrick Haugen's Interview Framework - Clever</title>
+		
+		<!-- JS: jQuery and jQuery UI loaded from Google APIs -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.3/jquery-ui.min.js"></script>
+		
+		<!-- JS: Leaflet loaded from their CDN for mapping -->
+		<script src="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js"></script>
+		
+		<!-- JS: Google's New no-Recaptcha Recaptcha for forms -->
+		<script src='https://www.google.com/recaptcha/api.js'></script>
+		
+		<!-- JS: Patrick Haugen's Initial Framework Javascript Load -->
+		<script src="/resources/js/"></script>
+		
+		<!-- CSS: Stylesheet for jQueryUI loaded from Google APIs -->
+		<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.3/themes/smoothness/jquery-ui.css" />
+		
+		<!-- CSS: Android style font loaded from Google's Font API -->
+		<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Roboto:400,900,300,400italic,300italic" />
+		
+		<!-- CSS: Leaflet Stylesheet loaded from their CDN for map styling -->
+		<link rel="stylesheet" type="text/css" href="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.css" />
+		
+		<!-- CSS: Patrick Haugen's Initial Framework CSS Load -->
+		<link rel="stylesheet" type="text/css" href="/resources/css/" />
+		
+	</head>
+	<body>
+		
+		
+		<!-- blackout used to mask certain areas of page when lightbox style popups happen -->
+		<div id="blackout" style="display:none;"></div>
+		
+		<!-- popup for content to be loaded into, then animate via jQuery/velocity into the viewport -->
+		<div id="popup"></div>
+		
+		
+		<nav id="nav">
+			<div class="loading-ajax">Patrick Haugen's Menu Loading for Clever.. please wait..</div>
+		</nav>
+		
+		
+		<header id="header">
+			<div class="loading-ajax">Patrick Haugen's Header Loading for Clever.. please wait..</div>
+		</header>
+		
+		
+		<section id="content">
+			<div class="loading-ajax">Patrick Haugen's Content Loading for Clever.. please wait..</div>
+		</section>
+		
+		
+		<footer id="footer">
+			<div class="loading-ajax">Patrick Haugen's Footer Loading for Clever.. please wait..</div>
+		</footer>
+		
+		
+	</body>
+</html>
+

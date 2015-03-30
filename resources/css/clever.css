@@ -1,0 +1,98 @@
+
+
+/* ---------- ---------- ---------- ---------- ---------- ---------- ---------- ---------- ---------- ---------- *
+file-name:		clever.css
+description:	CSS loaded when clever request is made.
+last-update:	2015-03-29: Sunday
+updated-by:		Patrick Haugen (pathaugen@gmail.com)
+* ---------- ---------- ---------- ---------- ---------- ---------- ---------- ---------- ---------- ---------- */
+
+
+.district,
+.school,
+.teacher,
+.student,
+.section,
+.event {
+	background-color:	lightblue;
+	border:				1px solid #3A373D;
+	
+	padding:			2%;
+	
+	cursor:				pointer;
+}
+
+.district-link,
+.school-link {
+	padding:			1%;
+	
+	cursor:				pointer;
+}
+.district-link-selected,
+.school-selected {
+	background-color:	yellow;
+	cursor:				default;
+}
+
+.district-id,
+.district-uri,
+.school-id,
+.teacher-id,
+.student-id,
+.section-id,
+.event-id {
+	color:				grey;
+	font-size:			0.8em;
+}
+
+.school,
+.teacher,
+.student,
+.section,
+.event {
+	display:			inline-block;
+	
+	padding:			1%;
+	margin:				1%;
+}
+
+.district-link:hover,
+.school:hover,
+.teacher:hover,
+.student:hover,
+.section:hover,
+.event:hover {
+	background-color:	yellow!important;
+}
+
+
+#popup-picture {
+	float:				left;
+	padding:			2%;
+}
+#popup-student,
+#popup-teacher,
+#popup-school {
+	float:				left;
+}
+#popup-student .popup-student-info,
+#popup-teacher .popup-teacher-info,
+#popup-school .popup-school-info {
+	padding:			2%;
+}
+
+
+#map-container {
+	clear:				both;
+	background-color:	lightcoral;
+}
+#map-container h1 {
+	display:			none;
+}
+#map {
+	height:				500px;
+}
+#map h2 {
+	display:			none;
+}
+

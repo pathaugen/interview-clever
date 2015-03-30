@@ -1,0 +1,20 @@
+
+
+/* ---------- ---------- ---------- ---------- ---------- ---------- ---------- ---------- ---------- ---------- *
+file-name:		header.css
+description:	CSS loaded when header request is made.
+last-update:	2015-03-29: Sunday
+updated-by:		Patrick Haugen (pathaugen@gmail.com)
+* ---------- ---------- ---------- ---------- ---------- ---------- ---------- ---------- ---------- ---------- */
+
+
+#header-logo {
+}
+#header-logo #logout {
+	float:			right;
+	line-height:	50px;
+	padding-right:	10px;
+}
+#header-logo #logout a {
+	color:			white;
+}
